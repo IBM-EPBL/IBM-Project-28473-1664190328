@@ -15,7 +15,6 @@
 <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-<link href="{{ url_for('static', filename='css/final.css') }}" rel="stylesheet"> 
 <style>
 .header {	
 			top:0;	
@@ -23,9 +22,9 @@
 			left: 0px;
 			right: 0px;
 			position: fixed;
-			background-color: #28272c;
+			background-color: #65fe08;
 			color: white;
-			box-shadow: 0px 8px 4px grey;
+			box-shadow: 0px 8px 4px gray;
 			overflow: hidden;
 			padding-left:20px;
 			font-family: 'Josefin Sans';
@@ -67,7 +66,6 @@
 margin-top:-70px;
 }
 body {
-
  background-image: url("static/images/bg2.jpg");
   background-color:#ffffff;
   background-repeat: no-repeat;
@@ -101,7 +99,9 @@ select {
 	-ms-transition: box-shadow .5s ease;
 	transition: box-shadow .5s ease;
 }
-
+#upload {
+color : black;
+}
   
 </style>
 </head>
@@ -120,7 +120,7 @@ select {
 		<div class="container">
 		  <div class="row">
 			<div class="col-sm-6 bd" >
-			 
+			 <img src="bg2.jpg" width="500" height="500">
 			  <br>     
 			</div>
 			<div class="col-sm-6">
@@ -128,15 +128,13 @@ select {
 					<h4>Drop in the image to get the prediction  </h4>
 			<form action = "" id="upload-file" method="post" enctype="multipart/form-data">
 				<select name="plant">
-			
 					  <option value="select" selected>Select plant type</option>
 					  <option value="fruit">Fruit</option>
 					  <option value="vegetable">Vegetable</option>
 		</select><br>
 				<label for="imageUpload" class="upload-label" style="background: #28272c;">
-					Choose...
+					<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
 				</label>
-				<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
 			</form>
 			
 
@@ -146,7 +144,7 @@ select {
 					</div>
 				</div>
 				<div>
-					<button type="button" class="btn btn-info btn-lg " id="btn-predict" style="background: #28272c;">Predict!</button>
+					<button type="button" class="btn btn-info btn-lg " id="btn-predict" style="background: #28272f;">Predict!</button>
 				</div>
 			</div>
 
